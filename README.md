@@ -7,13 +7,21 @@ Documentation site for Quiet Mind Creative, powered by [@quietmind/mdx-docs](htt
 ## Quick Start
 
 ```sh
-git clone https://github.com/ezrafree/quietmind-dev.git
-cd quietmind-dev
-yarn
+git clone https://github.com/ezrafree/quietmind-dev.git ; \
+cd quietmind-dev ; \
+yarn ; \
 yarn dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Updating MDX Docs
+
+To update `@quietmind/mdx-docs`:
+
+```sh
+yarn up @quietmind/mdx-docs@latest
+```
 
 ## Scripts
 
