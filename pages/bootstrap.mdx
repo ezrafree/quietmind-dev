@@ -1,0 +1,40 @@
+# macOS Bootstrap
+
+The Quiet Mind macOS Bootstrap sets up and configures a new macOS system — installing apps, applying settings, and getting you productive fast. Run it via `quietmind.sh`.
+
+## Prerequisites
+
+Before running the bootstrap script, complete the following steps.
+
+### Sign in to iCloud & App Store
+
+Sign in to both iCloud and the App Store using your Apple ID.
+
+- **iCloud:** System Settings → Apple ID
+- **App Store:** Open the App Store app → Sign In
+
+### Install Xcode Command Line Tools
+
+```sh
+xcode-select --install
+```
+
+## Previewing the Script
+
+```sh
+curl -fsSL quietmind.sh | less
+```
+
+## Running the Script
+
+```sh
+curl -fsSL quietmind.sh | bash
+```
+
+## What's Included
+
+Installs and configures [dotfiles](https://github.com/ezrafree/dotfiles), [Phoenix](https://github.com/ezrafree/phoenix-config) for window management, and [Karabiner-Elements](https://github.com/ezrafree/karabiner-config) for custom keyboard shortcuts.
+
+Also included are scripts to periodically clean up your Downloads folder and wipe your Screenshots folder.
+
+For a full picture of what gets installed, see the [Brewfile](https://github.com/ezrafree/dotfiles/blob/main/Brewfile), [global npm packages](https://github.com/ezrafree/dotfiles/blob/main/.config/bin/global-npm.sh), and [App Store apps](https://github.com/ezrafree/dotfiles/blob/main/.config/bin/global-mas.sh) in the dotfiles repo.
