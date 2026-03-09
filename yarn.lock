@@ -855,9 +855,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@quietmind/mdx-docs@npm:^0.1.1":
-  version: 0.1.4
-  resolution: "@quietmind/mdx-docs@npm:0.1.4"
+"@quietmind/mdx-docs@npm:>=0.0.0":
+  version: 0.1.6
+  resolution: "@quietmind/mdx-docs@npm:0.1.6"
   peerDependencies:
     "@emotion/react": ^11.14.0
     "@emotion/styled": ^11.14.0
@@ -872,7 +872,7 @@ __metadata:
     react-dom: ^19.1.0
     react-router-dom: ^7.6.2
     vite: ^6.4.1
-  checksum: 10c0/9211d90f007606c34afb0f5634da93b010db8672b007dd3d15649c9f9188804e38ac3e8ace58d115c94818a2f15059162e82619ecf40d8496da55a27cf87b4c3
+  checksum: 10c0/1fa276133b3bdd718ac61ae0a33d60104f58f3fd9325f11bf16fc8062b97cc79df515163bc7d5c6e9b6533fb50710ace09607c71001fa838b358d22abd8f0edb
   languageName: node
   linkType: hard
 
@@ -2918,7 +2918,7 @@ __metadata:
     "@mdx-js/rollup": "npm:^3.1.0"
     "@mui/icons-material": "npm:^7.1.2"
     "@mui/material": "npm:^7.1.2"
-    "@quietmind/mdx-docs": "npm:^0.1.1"
+    "@quietmind/mdx-docs": "npm:>=0.0.0"
     "@vitejs/plugin-react": "npm:^4.4.1"
     prism-react-renderer: "npm:^2.4.1"
     prismjs: "npm:^1.30.0"
