@@ -1,2 +1,0 @@
-import{j as t,a,F as r}from"./emotion-react-jsx-runtime.browser.esm-DZ8Y4bS4.js";import{u as i}from"./index-CLyXWSfs.js";function o(n){const e={h1:"h1",p:"p",...i(),...n.components};return a(r,{children:[t(e.h1,{children:"Quiet Mind Wiki"}),`
-`,t(e.p,{children:"Welcome to our documentation wiki. We are Quiet Mind Creative, an app development agency."})]})}function s(n={}){const{wrapper:e}={...i(),...n.components};return e?t(e,{...n,children:t(o,{...n})}):o(n)}export{s as default};

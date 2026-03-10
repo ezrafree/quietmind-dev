@@ -38,3 +38,108 @@ Installs and configures [dotfiles](https://github.com/ezrafree/dotfiles), [Phoen
 Also included are scripts to periodically clean up your Downloads folder and wipe your Screenshots folder.
 
 For a full picture of what gets installed, see the [Brewfile](https://github.com/ezrafree/dotfiles/blob/main/Brewfile), [global npm packages](https://github.com/ezrafree/dotfiles/blob/main/.config/bin/global-npm.sh), and [App Store apps](https://github.com/ezrafree/dotfiles/blob/main/.config/bin/global-mas.sh) in the dotfiles repo.
+
+### macOS System Configurations
+
+#### Mouse
+
+- Disable natural (reverse) scroll direction
+
+#### Keyboard
+
+- Key repeat rate: `2` (fast)
+- Initial key repeat delay: `15` (short)
+
+#### Trackpad
+
+- Tracking speed: `2.0`
+- Enable tap to click (built-in and Bluetooth trackpad)
+- Enable three-finger drag (built-in and Bluetooth trackpad)
+- Enable App Exposé swipe gesture
+
+#### Dock
+
+- Tile size: `72px`
+- Enable magnification at `115px`
+- Enable auto-hide
+- Hide recent apps
+
+#### Desktop Icons
+
+- Hide internal hard drives
+- Hide external hard drives
+- Hide removable media
+- Hide mounted servers
+
+#### Widgets
+
+- Always hide widgets on desktop
+
+#### Mission Control
+
+- Disable automatic Space reordering based on recent use
+- Disable switching to a Space when activating an app
+- Disable dragging windows into Spaces
+
+#### Stage Manager
+
+- Disable "click wallpaper to show desktop" outside of Stage Manager
+
+#### Screenshots
+
+- Save location: `~/Pictures/Screenshots`
+- Disable window drop shadow in screenshots
+
+#### Window Management
+
+- Space-switching edge-drag delay: `3.0` seconds
+
+#### Recent Items
+
+- Disable recent applications (max `0`)
+- Disable recent documents (max `0`)
+- Disable recent servers (max `0`)
+
+#### Network / File System
+
+- Disable `.DS_Store` creation on network drives
+
+#### TextEdit
+
+- Open a new blank document on launch (instead of the Open dialog)
+
+#### Finder
+
+- Show all file extensions
+- Default search scope to current folder
+- Show path bar
+- Show status bar
+- New window opens to `~/Downloads/`
+
+#### Lock Screen
+
+- Require password immediately after screensaver begins
+
+#### iCloud
+
+- Default save location: local disk (not iCloud Drive)
+
+#### Text Substitution
+
+- Disable smart quotes
+- Disable smart dashes
+
+#### Screensaver
+
+- Idle time before activation: `300` seconds (5 minutes)
+- Screensaver: **Aerial** (`/Library/Screen Savers/Aerial.saver`)
+- Import Aerial preferences from `~/.config/aerial/prefs.plist` (if present)
+
+#### AirDrop
+
+- Discoverability: **Off**
+
+#### LaunchAgents (Scheduled Tasks)
+
+- **`com.ezra.cleanup-downloads`** — runs `~/.bin/cleanup_downloads.sh` every 4 hours, also at login
+- **`com.ezra.cleanup-screenshots`** — runs `~/.bin/cleanup_screenshots.sh` every 4 hours, also at login
