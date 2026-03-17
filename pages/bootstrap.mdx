@@ -21,14 +21,24 @@ xcode-select --install
 
 ## Previewing the Script
 
+It's best practice to review the contents of a script before running it.
+
 ```sh
 curl -fsSL quietmind.sh | less
 ```
 
 ## Running the Script
 
+To run the script just pass it to bash.
+
 ```sh
 curl -fsSL quietmind.sh | bash
+```
+
+Alternatively, you can also pass the `--slack` flag to bash, to install Slack through Homebrew.
+
+```sh
+curl -fsSL quietmind.sh | bash -s -- --slack
 ```
 
 ## What's Included
