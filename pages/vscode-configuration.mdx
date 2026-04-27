@@ -1,0 +1,152 @@
+# VS Code Configuration
+
+## `code` Path
+
+To install `code` to your system `PATH`, execute `⌘ ⇧ P` to access the Command Pallette, and start typing:
+
+`“Shell Command: Install code command in PATH”`
+
+## User Settings
+
+Execute `⌘ ⇧ P` to enter the Command Pallette and choose `Preferences: Open Settings (JSON)` to access `settings.json`.
+
+The following is my current `settings.json`:
+
+```json
+{
+  "chat.disableAIFeatures": true,
+  "claudeCode.preferredLocation": "panel",
+  "editor.cursorSmoothCaretAnimation": "off",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "editor.guides.indentation": true,
+  "editor.indentSize": 2,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.snippetSuggestions": "top",
+  "editor.stickyTabStops": true,
+  "editor.tabSize": 2,
+  "editor.useTabStops": true,
+  "files.associations": {
+    "*.mdx": "markdown"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "security.workspace.trust.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 15,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 2
+}
+```
+
+## Keybindings
+
+To see the various commands whose keybindings you can override, execute `⌘ ⇧ P` to access the Command Palette, and start typing:
+
+`Preferences: Open Default Keyboard Shortcuts (JSON)`
+
+To override the default keybindings, execute `⌘ ⇧ P` to access the Command Palette, and start typing:
+
+`Preferences: Open Keyboard Shortcuts (JSON)`
+
+My current keyboard shortcuts configuration:
+
+```json
+[
+  {
+    "key": "cmd-shift-d",
+    "command": "editor.action.duplicateSelection",
+    "when": "editorFocus",
+  },
+    {
+    "key": "shift+cmd+g",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus",
+  },
+  {
+    "key": "ctrl+cmd+s",
+    "command": "extension.sort",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+1",
+    "command": "workbench.action.editorLayoutSingle",
+  },
+  {
+    "key": "alt+cmd+2",
+    "command": "workbench.action.editorLayoutTwoColumns",
+  },
+  {
+    "key": "alt+cmd+3",
+    "command": "workbench.action.editorLayoutThreeColumns",
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor",
+  },
+  {
+    "key": "ctrl+cmd+alt+l",
+    "command": "editor.action.transformToLowercase",
+  },
+  {
+    "key": "ctrl+cmd+alt+u",
+    "command": "editor.action.transformToUppercase",
+  },
+  {
+    "key": "ctrl+cmd+alt+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "alt+cmd+j",
+    "command": "workbench.action.webview.openDeveloperTools",
+    "when": "editorFocus"
+  },
+  {
+    "key": "tab",
+    "command": "emmet.expandAbbreviation",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !suggestWidgetVisible && emmet.enabledForLanguage"
+  },
+]
+```
+
+## Extensions
+
+The following are the extensions I run. After installing an extension, I prefer to disable it, and then in each specific workspace only enable the extensions I use for that workspace (I create separate workspaces for each project and use the Project Manager extension to quickly swap between them).
+
+- https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code
+- https://marketplace.visualstudio.com/items?itemName=ezrafree.ez-snippets
+- https://marketplace.visualstudio.com/items?itemName=bierner.markdown-checkbox
+- https://marketplace.visualstudio.com/items?itemName=ezrafree.markdown-preview
+- https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager
+- https://marketplace.visualstudio.com/items?itemName=henriiik.vscode-sort
+- https://marketplace.visualstudio.com/items?itemName=XadillaX.viml
+- https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode
+- https://marketplace.visualstudio.com/items?itemName=openai.chatgpt
+- https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+- https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
+- https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+## Color Theme
+
+I prefer the "One Dark Pro" color theme.
+
+- https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.One-dark-pro
+
+## Sync Settings
+
+To sync settinsg between two or more instances of VS Code, turn on Settings Sync using the `Turn on Settings Sync` option in the `Manage` gear menu at the bottom of the Activity Bar.
