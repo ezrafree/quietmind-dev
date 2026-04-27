@@ -4,6 +4,7 @@ import { lazy } from "react";
 // This reduces initial bundle size significantly
 const HomeMDX = lazy(() => import("@pages/home.mdx"));
 const BootstrapMDX = lazy(() => import("@pages/bootstrap.mdx"));
+const ZshCommands = lazy(() => import("@pages/zsh-commands.mdx"));
 
 // Centralized pages configuration
 // This controls both navigation and routing
@@ -18,5 +19,10 @@ export const pages = [
     name: "macOS Bootstrap",
     route: "/bootstrap",
     component: BootstrapMDX,
+  },
+  {
+    name: "Zsh Commands",
+    route: "/zsh-commands",
+    component: ZshCommands,
   },
 ];

@@ -1,0 +1,108 @@
+# Zsh Commands
+
+> The following is a guide to the commands and aliases available after configuring your system with the [Quiet Mind macOS Bootstrap](/bootstrap).
+
+## Fuzzy Finder
+
+`fzf` is an interactive filter program for any kind of list; files, command history, processes, hostnames, bookmarks, git commits, etc. It implements a "fuzzy" matching algorithm, so you can quickly type in patterns with omitted characters and still get the results you want.
+
+Tto quit interactive modes you can use any of the following keyboard shortcuts:
+
+- <kbd>Escape</kbd>
+- <kbd>CTRL</kbd> + <kbd>C</kbd>
+- <kbd>CTRL</kbd> + <kbd>Q</kbd>
+
+### Built-in Shell Integrations
+
+- <kbd>CTRL</kbd> + <kbd>R</kbd>: fuzzy search shell history
+- <kbd>CTRL</kbd> + <kbd>T</kbd>: fuzzy-insert a file path into the current command
+- <kbd>OPTION</kbd> + <kbd>C</kbd>: fuzzy `cd` into a subdirectory
+
+> Note: To enable <kbd>OPTION</kbd> + <kbd>C</kbd> you'll need to set "Left option key" to "ESC+" under `Settings > Profiles > Keys` in iTerm.
+
+### Usage
+
+Pipe the contents of a file to perform a fuzzy search of its contents:
+
+```sh
+cat readme.md | fzf
+```
+
+Show a file browser with file content previews to the right side of the terminal:
+
+```sh
+fzf --style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'
+```
+
+You can pipe the output from other commands to `fzf` as needed.
+
+```sh
+fd --type f --hidden --no-ignore | fzf | xargs open
+```
+
+## Zoxide
+
+`zoxide` is a smarter cd command. It remembers which directories you use most frequently, so you can "jump" to them in just a few keystrokes.
+
+- `z <directory>`
+- `zi` (use `control-c` to quit)
+
+## Aliases and Custom Functions
+
+### General
+
+- `search`: recursively search current directory, select a match with fuzzy search, and open it in nvim
+- `livesearch`: recursively perform a live search on the current directory
+- `cl`: clear the terminal output
+- `cdc`: change to the home directory and clear the terminal output
+- `mkcd`: make a new directory and change into the newly created directory
+- `echopath`: print out the paths in $PATH each on a new line
+- `lc`: copy the most recently run command to the clipboard
+
+### Git
+
+- `pdev`: check out the `dev` branch and pull the latest changes from the remote
+- `pmain`: check out the `main` branch and pull the latest changes from the remote
+- `brclear`: nuke all local branches except current, master, main, dev
+- `brsync`: delete local branches whose remote tracking branch no longer exists
+- `gco`: use fuzzy search to checkout a branch
+- `stash`: stash your current changes, including any untracked files
+- `logdiff`: show the full patch diff for every commit in the log
+- `gitstats`: shortcut to run `git-quick-stats`
+- `lg`: shortcut to run `lazygit`
+
+#### Sync Repo
+
+The `syncrepo` command runs `git pull`, `git add`, `git commit`, and `git push`.
+
+The command uses `cfg` (my dotfiles bare repo git command) instead of `git` when run in the home directory.
+
+### Developer Tools
+
+- `json`: maps to `jq`
+- `yaml`: maps to `yq`
+
+### Network
+
+- `flushdns`: flush the DNS cache and restart the DNS responder service
+- `localip`: show the local IP address
+
+### Zsh
+
+- `reload`: reload zsh
+- `timezsh`: benchmark zsh startup time
+
+### Add default flags to system commands
+
+- `df`: becomes `df -h` which outputs file system space usage in human-readable sizes in the power of 1024 (e.g. 1023M)
+- `du`: becomes `du -ch` which outputs a total disk usage in human-readable sizes in the power of 1024 (e.g. 1023M)
+- `grep`: becomes `grep --color=auto` which colorizes the output when stdout is a TTY
+- `fgrep`: becomes `fgrep --color=auto` which colorizes the output when stdout is a TTY
+- `egrep`: becomes `egrep --color=auto` which colorizes the output when stdout is a TTY
+- `diff`: becomes `diff --color=auto` which colorizes the output when stdout is a TTY
+- `rg`: becomes `rg --smart-case` which matches case-insensitively unless the pattern contains an uppercase letter, in which case it matches case-sensitively
+
+### Phoenix Window Manager
+
+- `cdphoenix`: change to the `~/.config/phoenix/` directory
+- `logphoenix`: change to the `~/.config/phoenix/` directory and tail the log file
