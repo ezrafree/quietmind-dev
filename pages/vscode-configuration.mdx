@@ -12,13 +12,18 @@ Execute `⌘ ⇧ P` to enter the Command Pallette and choose `Preferences: Open 
 
 The following is my current `settings.json`:
 
+> Note: To use "editor.fontLigatures" you need the Fira Code font. Install it with `brew install --cask font-fira-code` if you don't already have it.
+
 ```json
 {
   "chat.disableAIFeatures": true,
   "claudeCode.preferredLocation": "panel",
   "editor.cursorSmoothCaretAnimation": "off",
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', 'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
+  // https://github.com/tonsky/FiraCode/wiki/How-to-enable-stylistic-sets
+  // abcdefghijklmnopqrstuvwxyz 1234567890 !@#$%^&*()\/|?{}~ fn => ($var) => { ... } <= >= var[] =~ !=
+  "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'zero', 'onum', 'cv06', 'cv14', 'cv16', 'cv27', 'cv30', 'cv31'",
   "editor.fontSize": 14,
   "editor.guides.indentation": true,
   "editor.indentSize": 2,
