@@ -10,9 +10,13 @@ To install `code` to your system `PATH`, execute `⌘ ⇧ P` to access the Comma
 
 Execute `⌘ ⇧ P` to enter the Command Pallette and choose `Preferences: Open Settings (JSON)` to access `settings.json`.
 
-The following is my current `settings.json`:
+The following is my current `settings.json`.
 
-> Note: To use "editor.fontLigatures" you need the Fira Code font. Install it with `brew install --cask font-fira-code` if you don't already have it.
+To use "editor.fontLigatures" you need the Fira Code font.
+
+```sh
+brew install --cask font-fira-code
+```
 
 ```json
 {
@@ -43,14 +47,56 @@ The following is my current `settings.json`:
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.fontSize": 15,
-  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editorAssociations": {
     "*.svg": "default"
   },
   "workbench.startupEditor": "none",
-  "window.zoomLevel": 2
+  "window.zoomLevel": 2,
+  "workbench.colorCustomizations": {
+    // Top title bar
+    "titleBar.activeBackground": "#0a0a0a",
+    "titleBar.activeForeground": "#cccccc",
+
+    // Left activity bar (the icon strip)
+    "activityBar.background": "#080808",
+    "activityBar.foreground": "#cccccc",
+    "activityBar.activeBorder": "#569CD6",
+    "activityBarBadge.background": "#569CD6",
+
+    // Sidebar panel (extensions list, file tree, etc.)
+    "sideBar.background": "#0f0f0f",
+    "sideBar.foreground": "#aaaaaa",
+    "sideBarSectionHeader.background": "#0a0a0a",
+
+    // The border between sidebar and editor
+    "sideBar.border": "#1a1a1a",
+
+    // Editor
+    "editor.background": "#080808",
+
+    // The bar behind the tabs
+    "editorGroupHeader.tabsBackground": "#0a0a0a",
+
+    // Active (currently open) tab
+    "tab.activeBackground": "#1e1e1e",
+    "tab.activeForeground": "#ffffff",
+    "tab.activeBorder": "#569CD6",        // underline on active tab
+
+    // Inactive tabs
+    "tab.inactiveBackground": "#0a0a0a",
+    "tab.inactiveForeground": "#666666",
+
+    // Hovered tab
+    "tab.hoverBackground": "#141414",
+    "tab.hoverForeground": "#aaaaaa",
+
+    // Modified (unsaved) dot indicator
+    "tab.unfocusedActiveModifiedBorder": "#569CD6",
+    "tab.activeModifiedBorder": "#569CD6"
+  },
+  "workbench.colorTheme": "One Dark Pro Night Flat"
 }
 ```
 
@@ -145,12 +191,7 @@ The following are the extensions I run. After installing an extension, I prefer 
 - https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 - https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
 - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-
-## Color Theme
-
-I prefer the "One Dark Pro" color theme.
-
-- https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.One-dark-pro
+- https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme
 
 ## Sync Settings
 

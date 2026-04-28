@@ -22,13 +22,13 @@ export const pages = [
     component: BootstrapMDX,
   },
   {
-    name: "Zsh Commands",
-    route: "/zsh-commands",
-    component: ZshCommands,
-  },
-  {
     name: "VS Code Configuration",
     route: "/vscode-configuration",
     component: VSCodeConfiguration,
+  },
+  {
+    name: "Zsh Commands",
+    route: "/zsh-commands",
+    component: ZshCommands,
   },
 ];
